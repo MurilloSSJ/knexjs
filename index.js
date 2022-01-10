@@ -57,3 +57,10 @@ database.select().table('games').orderBy('preco','desc').then(data=>{
 }).catch(err=>{
     console.log(err)
 }) //desc ou asc
+
+//inner join
+database.select().table("games").innerJoin("champion","game_id","games.id").then(data=>{
+    console.log(data)
+}).catch(err=>{
+    console.log(err)
+})
